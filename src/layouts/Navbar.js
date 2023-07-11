@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
         <div className='navbar'>
             <div>
-                <a href='#'><img src={logo} alt='logo' id='logo'/></a>
+                <a href='/'><img src={logo} alt='logo' id='logo'/></a>
             </div>
             <div id='social'>
            <p>About us</p>
