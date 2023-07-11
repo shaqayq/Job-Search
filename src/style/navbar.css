@@ -1,3 +1,22 @@
 .navbar{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 13%;
+}
+
+#social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-right: 37px;
+}
+
+
+#social p {
+    color: #237ab6;
+    font-weight: bold;
 }
