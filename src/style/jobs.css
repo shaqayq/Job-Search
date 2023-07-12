@@ -30,3 +30,28 @@
   border: #fff;
   padding: 13px;
 }
+
+.search-box input:hover {
+    border: 2px solid #fdae3f;
+}
+
+.card {
+  width: 24%;
+  padding: 23px;
+}
+
+#title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#comapany_logo {
+  border-radius: 100%;
+  width: 18%;
+}
+
+#details button {
+  float: right;
+}
