@@ -4,7 +4,7 @@ import JobCard from './jobCard'
 export default function List() {
   return (
    <>
-    <div>
+    <div className='job-lists'>
      
         <JobCard/>
     </div>

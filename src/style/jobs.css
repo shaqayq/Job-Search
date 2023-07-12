@@ -35,18 +35,45 @@
     border: 2px solid #fdae3f;
 }
 
+.job-lists {
+  background-color: #ced8e37d;
+  padding: 10px;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  row-gap: 22px;
+  margin: 70px;
+}
+
+.card:hover {
+  background-color: #4d78a7b8;
+}
+
 .card {
-  width: 24%;
+  width: 83%;
   padding: 23px;
+  background: #f5ebd145;
+  box-shadow: 1px 1px #b7c3d4ad;  
 }
 
 #title{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items:  flex-start;
 }
 
+#title a {
+  font-size: 19px;
+}
+
+#post-date {
+
+  font-size: 11px;
+}
 #comapany_logo {
   border-radius: 100%;
   width: 18%;
@@ -54,4 +81,7 @@
 
 #details button {
   float: right;
+  margin: 4px;
+  color: #fff;
 }
+
