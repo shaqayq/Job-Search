@@ -1,0 +1,40 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #e7ecf1d1;
+    border-bottom: 1px solid #bbd2e0;
+    box-shadow: 0 2px #bbd2e078;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+
+#logo {
+    width: 13%;
+}
+
+#social {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-right: 37px;
+}
+
+
+#social p {
+    color: #237ab6;
+    font-weight: bold;
+}
+
+#social p:hover {
+    color: #dd972e;
+    font-size: 16px;
+    font-style: italic;
+    cursor: pointer;
+   
+}
+
+
