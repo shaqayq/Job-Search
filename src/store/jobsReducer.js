@@ -24,7 +24,8 @@ export const fetchJobs = createAsyncThunk(GET_DATA, async () => {
 
     const response = await fetch(URL,{
       headers: {
-        Authorization: AUTH
+        Authorization: AUTH,
+        'Content-Type': 'application/json',
       }
     });
     
