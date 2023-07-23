@@ -47,8 +47,8 @@ export default function JobCard(props) {
             </p>
          
          
-         <a href={url}> <button className='btn btn-sm btn-warning'>Apply</button></a>
-          <a href={id}><button className='btn btn-sm btn-info'>Show</button></a>
+         <a href={url} target='_blank'> <button className='btn btn-sm btn-info'>Apply</button></a>
+       
          </section>
         </div>
        
