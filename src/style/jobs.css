@@ -45,15 +45,16 @@
   grid-template-columns: auto auto auto auto;
   justify-content: center;
   row-gap: 22px;
+  column-gap: 18px;
   margin: 70px;
 }
 
 .card:hover {
-  background-color: #4d78a7b8;
+  background-color: #4d78a721;
 }
 
 .card {
-  width: 83%;
+ 
   padding: 23px;
   background: #f5ebd145;
   box-shadow: 1px 1px #b7c3d4ad;  
@@ -68,6 +69,10 @@
 
 #title a {
   font-size: 19px;
+}
+
+#title i:hover {
+ color: #ff0000;
 }
 
 #post-date {
@@ -91,3 +96,6 @@ color: #fff;
   color: #fff;
 }
 
+#details p {
+  margin: 0;
+}

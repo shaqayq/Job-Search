@@ -1,10 +1,11 @@
 import React from 'react'
-import photo from '../../img/img1.jpg'
+import {BsBookmarkHeart} from 'react-icons/bs'
 import {FaBookmark} from 'react-icons/fa'
+import {FcHome, FcOrganization} from 'react-icons/fc'
 
 export default function JobCard(props) {
 
-  const {id, role, company_name, employment_type, date_posted,logo,remote,url} = props.details
+  const {id, role, company_name, employment_type, date_posted,remote,url ,location} = props.details
   const companyInitial = company_name.charAt(0);
 
   const getRandomColor = () => {
@@ -19,35 +20,40 @@ export default function JobCard(props) {
 
   return (
     <>
-      <div className='lists'>
+
 
       <div className='card'>  
          <section id="title">
-            {/* <img src={logo} id='comapany_logo ' alt = 'jobLogo'/> */}
+          
             <h1 className='company_initial' style={{backgroundColor: randomBackgroundColor}}>{companyInitial}</h1>
             <span>
-            <h5>{role}</h5>
+            <h6>{role}</h6>
             <p id='post-date'>{date_posted}</p>
             </span>
+            <span>
             <a href='/'>
-              <i><FaBookmark/></i></a>
+              <i><BsBookmarkHeart/></i></a>
+            </span>
          </section>
-
+             <hr/>
          <section id='details'> 
-            <p><b>{company_name} </b>(remote:{remote})</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
+            <p><b>Company: </b>{company_name}</p>
+             <p>
+            <b>location:</b>{remote ? <i>Remote <FcHome/></i> : <span>Onsite ({location})<i><FcOrganization/></i></span> }   
+            </p>
+         
+            <p>
+              <b>Type:</b> {employment_type != null ? employment_type : 'Part_time'}
+            </p>
+         
          
          <a href={url}> <button className='btn btn-sm btn-warning'>Apply</button></a>
-          <button className='btn btn-sm btn-info'>Show</button>
+          <a href={id}><button className='btn btn-sm btn-info'>Show</button></a>
          </section>
         </div>
        
 
-      </div>
+      
     </>
   )
 }

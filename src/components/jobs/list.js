@@ -17,10 +17,11 @@ export default function List() {
   return (
    <>
     <div className='job-lists'>
+    <div className='lists'>
    {  jobsList.map((element) => {
        return <JobCard key={element.id} details={element}/>
      })}
-      
+      </div>
     </div>
    </>
   )
