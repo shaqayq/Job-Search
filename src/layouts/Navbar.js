@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/navbar.css'
-// import {FaGithub , FaLinkedinIn , FaTwitter } from 'react-icons/fa'
+
 import logo from '../img/logo.png'
 export default function Navbar() {
   return (

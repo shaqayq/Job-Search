@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 23px;
+    background-color: #d2dcec;
+}
+
+.footer h4 {
+    color: #1574b7;
+}
+
+#foo {
+    width: 12%;
+}
+
+#foo_social {
+    list-style: none;
+}
+
+#foo_social li a{
+    color: #d48d1c;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contact span {
+    color: #d48d1c;
+    cursor: pointer;
+}
