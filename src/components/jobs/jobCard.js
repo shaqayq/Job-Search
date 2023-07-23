@@ -1,129 +1,59 @@
 import React from 'react'
-import photo from '../../img/img1.jpg'
+import {BsBookmarkHeart} from 'react-icons/bs'
 import {FaBookmark} from 'react-icons/fa'
+import {FcHome, FcOrganization} from 'react-icons/fc'
 
-export default function JobCard() {
+export default function JobCard(props) {
+
+  const {id, role, company_name, employment_type, date_posted,remote,url ,location} = props.details
+  const companyInitial = company_name.charAt(0);
+
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  const randomBackgroundColor = getRandomColor();
+
   return (
     <>
-      <div className='lists'>
+
 
       <div className='card'>  
          <section id="title">
-            <img src={photo} id='comapany_logo'/>
+          
+            <h1 className='company_initial' style={{backgroundColor: randomBackgroundColor}}>{companyInitial}</h1>
             <span>
-            <h5>Web Developer</h5>
-            <p id='post-date'>2023-10-06</p>
+            <h6>{role}</h6>
+            <p id='post-date'>{date_posted}</p>
             </span>
+            <span>
             <a href='/'>
-              <i><FaBookmark/></i></a>
+              <i><BsBookmarkHeart/></i></a>
+            </span>
          </section>
-
+             <hr/>
          <section id='details'> 
-            <p><b>Parsoft </b>(remote)</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
+            <p><b>Company: </b>{company_name}</p>
+             <p>
+            <b>location:</b>{remote ? <i>Remote <FcHome/></i> : <span>Onsite ({location})<i><FcOrganization/></i></span> }   
+            </p>
          
-          <button className='btn btn-sm btn-warning'>Apply</button>
-          <button className='btn btn-sm btn-info'>Show</button>
+            <p>
+              <b>Type:</b> {employment_type != null ? employment_type : 'Part_time'}
+            </p>
+         
+         
+         <a href={url} target='_blank'> <button className='btn btn-sm btn-info'>Apply</button></a>
+       
          </section>
         </div>
-        <div className='card'>  
-         <section id="title">
-            <img src={photo} id='comapany_logo'/>
-            <span>
-            <h5>Web Developer</h5>
-            <p id='post-date'>2023-10-06</p>
-            </span>
-            <a href='/'>
-              <i><FaBookmark/></i></a>
-         </section>
+       
 
-         <section id='details'> 
-            <p><b>Parsoft </b>(remote)</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
-         
-          <button className='btn btn-sm btn-warning'>Apply</button>
-          <button className='btn btn-sm btn-info'>Show</button>
-         </section>
-        </div>
-        <div className='card'>  
-         <section id="title">
-            <img src={photo} id='comapany_logo'/>
-            <span>
-            <h5>Web Developer</h5>
-            <p id='post-date'>2023-10-06</p>
-            </span>
-            <a href='/'>
-              <i><FaBookmark/></i></a>
-         </section>
-
-         <section id='details'> 
-            <p><b>Parsoft </b>(remote)</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
-         
-          <button className='btn btn-sm btn-warning'>Apply</button>
-          <button className='btn btn-sm btn-info'>Show</button>
-         </section>
-        </div>
-        <div className='card'>  
-         <section id="title">
-            <img src={photo} id='comapany_logo'/>
-            <span>
-            <h5>Web Developer</h5>
-            <p id='post-date'>2023-10-06</p>
-            </span>
-            <a href='/'>
-              <i><FaBookmark/></i></a>
-         </section>
-
-         <section id='details'> 
-            <p><b>Parsoft </b>(remote)</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
-         
-          <button className='btn btn-sm btn-warning'>Apply</button>
-          <button className='btn btn-sm btn-info'>Show</button>
-         </section>
-        </div>
-        <div className='card'>  
-         <section id="title">
-            <img src={photo} id='comapany_logo'/>
-            <span>
-            <h5>Web Developer</h5>
-            <p id='post-date'>2023-10-06</p>
-            </span>
-            <a href='/'>
-              <i><FaBookmark/></i></a>
-         </section>
-
-         <section id='details'> 
-            <p><b>Parsoft </b>(remote)</p>
-            
-           <p>I have studied Computer Science and Engineering.
-             I am an enthusiastic and social person who loves
-              to take up new challenges and learn new skills.
-          </p>
-         
-          <button className='btn btn-sm btn-warning'>Apply</button>
-          <button className='btn btn-sm btn-info'>Show</button>
-         </section>
-        </div>
-
-      </div>
+      
     </>
   )
 }
