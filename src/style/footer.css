@@ -5,6 +5,9 @@
     align-items: flex-start;
     padding: 23px;
     background-color: #d2dcec;
+    position: relative;
+ 
+
 }
 
 .footer h4 {

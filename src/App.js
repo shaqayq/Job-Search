@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from "./layouts/Navbar"
 import Main from "./components/jobs/main";
-import About from './components/About'
+import About from './components/about/About';
 import Footer from './layouts/footer';
 
 import {
