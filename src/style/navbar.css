@@ -23,10 +23,15 @@
     margin-right: 37px;
 }
 
+#social a {
+    text-decoration: none;
+}
+
 
 #social p {
     color: #237ab6;
     font-weight: bold;
+    
 }
 
 #social p:hover {
