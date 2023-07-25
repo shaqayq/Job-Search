@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/contact.css'
+import '../style/container.css'
 
 export default function Container({ children }) {
     return (

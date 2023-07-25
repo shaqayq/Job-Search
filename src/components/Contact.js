@@ -1,5 +1,5 @@
 import React from 'react'
-// import '../style/contact.css'
+ import '../style/contact.css'
 import contact from '../img/contact.png'
 import Container from './container'
 
