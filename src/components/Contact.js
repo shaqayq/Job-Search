@@ -1,11 +1,14 @@
 import React from 'react'
-import '../style/contact.css'
+// import '../style/contact.css'
 import contact from '../img/contact.png'
+import Container from './container'
+
 export default function Contact() {
   return (
     <>
-        <div class="container">
-      <div class="content">
+    <Container>
+    <div class="contact-container">
+      <div class="contact-content">
         <div class="image-box">
           <img src={contact} alt="" />
         </div>
@@ -29,7 +32,7 @@ export default function Contact() {
         </form>
       </div>
     </div>
-
+    </Container>
     </>
   )
 }

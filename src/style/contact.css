@@ -1,30 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fae9fb;
-  position: relative;
-}
-body::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background: #ba24c2;
-  clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
-}
-.container {
+
+.contact-container {
   z-index: 12;
   max-width: 1050px;
   width: 100%;
@@ -33,34 +9,34 @@ body::before {
   margin: 0 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.container .content {
+.contact-container .contact-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px 20px;
 }
-.content .image-box {
+.contact-content .image-box {
   max-width: 55%;
 }
-.content .image-box img {
+.contact-content .image-box img {
   width: 100%;
 }
-.content .topic {
+.contact-content .topic {
   font-size: 22px;
   font-weight: 500;
   color: #ba24c2;
 }
-.content form {
+.contact-content form {
   width: 40%;
   margin-right: 30px;
 }
-.content .input-box {
+.contact-content .input-box {
   height: 50px;
   width: 100%;
   margin: 16px 0;
   position: relative;
 }
-.content .input-box input {
+.contact-content .input-box input {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -72,12 +48,12 @@ body::before {
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
-.content .input-box input:focus,
-.content .input-box input:valid {
+.contact-content .input-box input:focus,
+.contact-content .input-box input:valid {
   border-color: #ba24c2;
   background-color: #fff;
 }
-.content .input-box label {
+.contact-content .input-box label {
   position: absolute;
   left: 18px;
   top: 50%;
@@ -87,19 +63,19 @@ body::before {
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
-.content .input-box input:focus ~ label,
-.content .input-box input:valid ~ label {
+.contact-content .input-box input:focus ~ label,
+.contact-content .input-box input:valid ~ label {
   top: 0;
   left: 12px;
   display: 14px;
   color: #ba24c2;
   background: #fff;
 }
-.content .message-box {
+.contact-content .message-box {
   min-height: 100px;
   position: relative;
 }
-.content .message-box textarea {
+.contact-content .message-box textarea {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -111,11 +87,11 @@ body::before {
   padding: 5px 16px;
   transition: all 0.3s ease;
 }
-.content .message-box textarea:focus {
+.contact-content .message-box textarea:focus {
   border-color: #ba24c2;
   background-color: #fff;
 }
-.content .message-box label {
+.contact-content .message-box label {
   position: absolute;
   font-size: 16px;
   color: #636c72;
@@ -124,14 +100,14 @@ body::before {
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.content .message-box textarea:focus ~ label {
+.contact-content .message-box textarea:focus ~ label {
   left: 12px;
   top: -10px;
   color: #ba24c2;
   font-size: 14px;
   background: #fff;
 }
-.content .input-box input[type="submit"] {
+.contact-content .input-box input[type="submit"] {
   color: #fff;
   background: #ba24c2;
   padding-left: 0;
@@ -141,22 +117,22 @@ body::before {
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
-.content .input-box input[type="submit"]:hover {
+.contact-content .input-box input[type="submit"]:hover {
   background-color: #d43ddb;
 }
 @media (max-width: 1000px) {
-  .content .image-box {
+  .contact-content .image-box {
     max-width: 70%;
   }
-  .content {
+  .contact-content {
     padding: 10px 0;
   }
 }
 @media (max-width: 900px) {
-  .content .image-box {
+  .contact-content .image-box {
     display: none;
   }
-  .content form {
+  .contact-content form {
     width: 100%;
     margin-left: 30px;
   }

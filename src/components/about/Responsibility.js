@@ -5,7 +5,7 @@ import Personlized from '../../img/Personalized_Experience.png'
 
 
 
-export default function Responsiblity() {
+export default function Responsibility() {
   return (
    
     <>
