@@ -9,7 +9,7 @@ export default function Main() {
   return (
    <>
    <Device/>
-   {/* <List /> */}
+   <List />
    </>
   )
 }

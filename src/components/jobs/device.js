@@ -1,10 +1,18 @@
 import React from 'react'
 import Animation from './animation'
+import Message from './message'
+import '../../style/device.css'
 
 export default function Device() {
   return (
     <>
-    <Animation/>
+    <div className='device-section'>
+     
+        <Animation/>
+        
+        
+        <Message/>
+    </div>
     </>
   )
 }
