@@ -10,7 +10,7 @@
   -webkit-filter: blur(6px);
 }
 
-.search-box {
+/* .search-box {
   color: white;
   position: absolute;
   top: 39%;
@@ -33,11 +33,19 @@
 
 .search-box input:hover {
     border: 2px solid #fdae3f;
-}
+} */
 
 .job-lists {
   background-color: #ced8e37d;
   padding: 10px;
+}
+
+#list-title{
+  border-bottom: 1px solid;
+    border-top: 1px solid;
+    margin: auto;
+    margin-top: 3%;
+    width: 59%;
 }
 
 .lists {
