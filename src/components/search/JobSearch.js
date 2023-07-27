@@ -3,7 +3,10 @@ import React from 'react'
 export default function JobSearch() {
   return (
     <>
+     <div className='col-lg-4'>
+       
      <form class="job-search-form">
+     <h3 id='form-title'>Search Your Dream Job</h3>
         <div class="form-group">
             <label for="search">Search:</label>
             <input type="text" id="search" name="search" placeholder="Search jobs..." />
@@ -40,7 +43,8 @@ export default function JobSearch() {
         <div class="form-group">
             <button type="submit">Search</button>
         </div>
-        </form>
+     </form>
+     </div>
 
     </>
   )
