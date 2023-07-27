@@ -1,7 +1,7 @@
 import React from 'react'
  import '../style/contact.css'
 import contact from '../img/contact.png'
-import Container from './container'
+import Container from '../layouts/container'
 
 export default function Contact() {
   return (
