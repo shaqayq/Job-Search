@@ -7,7 +7,9 @@ export default function Device() {
   return (
     <>
     <div className='device-section'>
-     
+      <div className='device-bg'>
+
+      </div>
         <Animation/>
         
         
