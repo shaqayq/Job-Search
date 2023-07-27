@@ -1,7 +1,9 @@
 import React , {useState} from 'react'
-
+import { useDispatch } from 'react-redux';
+import { fetch_job } from '../../store/searchReducer';
 export default function JobSearch() {
     
+    const dispatch = useDispatch();
     const [formData , setFormData] = useState({
         title: '',
         source_url:'',
@@ -22,10 +24,9 @@ export default function JobSearch() {
     }
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
-        console.log('submit');
-        console.log(formData);
-    
+       
+        e.preventDefault();     
+        dispatch(fetch_job(formData))
       }
     
   return (
@@ -40,9 +41,11 @@ export default function JobSearch() {
         </div>
         <div className="form-group">
             <label htmlFor="source-url">Source URL:</label>
-           
-            <select id="source_url" name="source_url" value={formData.source_url}>
-                <option value='www.google.com'>www.google.com</option>
+            <select id="s" name="source_url" onChange={handleChange} value={formData.source_url}>
+                <option value='null'>-----Select Source------</option>
+                <option value="google" >www.google.com</option>
+                <option value="faceBook" >www.faceBook.com</option>
+
             </select>
         </div>
         <div className="form-group">
@@ -52,13 +55,15 @@ export default function JobSearch() {
         <div className="form-group">
             <label htmlFor="remote">Remote:</label>
             <select id="remote" name="remote" onChange={handleChange} value={formData.remote} >
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option >-----Select Your chooice------</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
             </select>
         </div>
         <div className="form-group">
             <label htmlFor="company-employees">Company Number of Employees:</label>
             <select id="company_employees" name="company_employees" onChange={handleChange} value={formData.company_employees}>
+            <option >-----Select Number Of Comany Employees ------</option>
                 <option value='1-15'>1-15</option>
                 <option value='20-30'>20-30</option>
 
@@ -67,8 +72,9 @@ export default function JobSearch() {
         <div className="form-group">
             <label htmlFor="employment-type">Employment Type:</label>
             <select id="employment_type" name="employment_type" onChange={handleChange} value={formData.employment_type}>
-            <option value="full-time">Full-time</option>
-            <option value="part-time">Part-time</option>
+            <option>-----Select Your Chooice------</option>
+            <option value="full time">Full-time</option>
+            <option value="part time">Part-time</option>
             <option value="contract">Contract</option>
             <option value="temporary">Temporary</option>
             <option value="internship">Internship</option>
