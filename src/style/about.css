@@ -1,0 +1,58 @@
+.about_container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4% 0 4% 0;
+}
+.about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed in the viewport */
+    filter: blur(10px); /* Add the blur effect */
+    z-index: -1; 
+}
+
+.details {
+
+ color: #23414b;
+ width: 70%; 
+ margin: auto;
+ background-color: #fafafacc;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ display: flex;
+ flex-direction: column;
+
+ justify-content: center;
+ padding: 20px;
+ border-radius: 20px;
+
+
+}
+
+.details hr {
+    width: 10%;
+    margin: auto;
+}
+
+.responsiblity li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 117px;
+    margin-bottom: 5%;
+} 
+
+.responsiblity li img {
+    border-radius: 0 20px 0 20px;
+    border: 1px solid #e2eef124;
+    box-shadow: 10px 10px 5px #9eb4bf66;
+}
+
+#reverse{
+    flex-direction: row-reverse;
+}
