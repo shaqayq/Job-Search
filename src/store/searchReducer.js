@@ -1,6 +1,7 @@
 import { createAction, createReducer , createAsyncThunk} from "@reduxjs/toolkit";
 
 
+
 const BASE_URL= 'jobs/'
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 const GET_JOB = createAction('job/Search')
@@ -11,6 +12,9 @@ const searchReducer = createReducer(initState  , (builder) => {
     builder
         .addCase(`${GET_JOB}/fulfilled` , (state , action)=>{
         return action.payload
+    })
+    .addCase(`${GET_JOB}/pending`, (state , action)=>{
+        return {...state , delay: true}
     })
     .addDefaultCase((state , action)=> {return state})
 })
