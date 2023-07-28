@@ -6,12 +6,23 @@ const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 
 const GET_DATA = 'GET_DATA';
 
-const initState = [];
+const initState = {
+  data:[],
+  delay:''
+};
 
 const jobsReducer = (state = initState, action) => {
   switch (action.type) {
     case `${GET_DATA}/fulfilled`:
-      return  action.payload ;
+      return {...state , 
+          data: action.payload,
+          delay: false
+      } ;
+      case `${GET_DATA}/pending`:
+        return {
+          ...state,
+          delay:true
+        };
     default:
       return state;
   }
@@ -19,7 +30,7 @@ const jobsReducer = (state = initState, action) => {
 
 
 export const fetchJobs = createAsyncThunk(GET_DATA, async () => {
-  try {
+
 
     const response = await fetch(URL,{
       headers: {
@@ -37,10 +48,7 @@ export const fetchJobs = createAsyncThunk(GET_DATA, async () => {
     
    return jsonRespone.results;
 
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
-  }
+  
 });
 
 export default jobsReducer;

@@ -67,3 +67,7 @@ color: #fff;
 #details p {
   margin: 0;
 }
+
+#list_loading{
+  height: 20vh;
+}
