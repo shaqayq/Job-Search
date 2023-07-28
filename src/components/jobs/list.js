@@ -12,6 +12,8 @@ export default function List() {
   const dispatch = useDispatch();
   const jobsList = useSelector((state)=>state.jobs)
   const all_jobs = jobsList?.data;
+
+
  
   const {delay} = jobsList
    const {currentPage, jobsPerPage, currentJobs, paginate } = usePagination(1,8,all_jobs)
@@ -32,13 +34,13 @@ export default function List() {
        <Loading/>
       </div> }
       
-     {!delay && currentJobs.map((element) => {
-       return <JobCard key={element.id} details={element}/>
-     })}
+      {!delay && currentJobs.map((element) => {
+        return <JobCard key={element.id} details={element}/>
+      })}
       </div>
       <Pagination
         jobsPerPage={jobsPerPage}
-        totalJobs={jobsList.length}
+        totalJobs={all_jobs.length}
         paginate={paginate}
         currentNumber={currentPage}
       />
