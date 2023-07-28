@@ -13,14 +13,14 @@ export default function Search() {
 
 
   const jobs = useSelector(state => state.result);
-
   const jobsLength = Object.keys(jobs).length;
- 
   const result_data = jobs?.data;
-  // console.log(jobsLength);
 
+  const data_length = result_data.length > 0 ? result_data.length : null ;
+  
   const {delay} = jobs
  
+
   return (
    
    <>
@@ -35,7 +35,7 @@ export default function Search() {
        }
 
        
-       {!delay && jobsLength > 1 ? <Result result={result_data} /> : <></>}
+       {!delay && jobsLength > 1  ? <Result result={result_data} dataLength={data_length}/> : <></>}
 
     </div>
    </Container>
