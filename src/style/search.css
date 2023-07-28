@@ -54,7 +54,7 @@
   .job-search-form select:hover, input:hover{
     border: 2px solid #237ab6;
   }
-  button {
+  #searchBtn {
     padding: 8px 20px;
     background-color: #dba22e;
     color: #fff;
@@ -65,7 +65,32 @@
     margin: auto;
   }
   
-  button:hover {
+  #searchBtn:hover {
     background-color: #b78521;
   }
-  
+
+
+  .result {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: center;
+    row-gap: 22px;
+    column-gap: 18px;
+  }
+
+  .result .card {
+    background-color: #8ebfe1;
+  }
+
+  .result .card:hover{
+    background-color: #237ab6;
+  }
+
+  #alert {
+    color: #fff;
+    border: 1px solid;
+    height: 76px;
+    padding: 15px;
+    background: #cf7d26;
+    border-radius: 22px
+  }

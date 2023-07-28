@@ -1,29 +1,22 @@
-import React , {useEffect , useState} from 'react'
+import React , {useEffect } from 'react'
 import {useDispatch , useSelector} from 'react-redux'
 
 import {fetchJobs} from '../../store/jobsReducer'
 import JobCard from './jobCard'
-import Pagination from '../Pagination'
+import Pagination from '../pagination/Pagination'
+import { usePagination } from '../pagination/PaginationUtils'
 
 export default function List() {
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const [jobsPerPage] = useState(8);
 
   const dispatch = useDispatch();
   const jobsList = useSelector((state)=>state.jobs)
 
+  const {currentPage, jobsPerPage, currentJobs, paginate } = usePagination(1,8,jobsList)
+  
   useEffect(()=>{
     dispatch(fetchJobs())
   },[] )
 
-  // Get current posts
-  const indexOfLastJob = currentPage * jobsPerPage;
-  const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = jobsList.slice(indexOfFirstJob, indexOfLastJob);
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
    <>

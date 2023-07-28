@@ -81,7 +81,7 @@ export default function JobSearch() {
             </select>
         </div>
         <div className="form-group">
-            <button type="submit">Search</button>
+            <button type="submit" id='searchBtn'>Search</button>
         </div>
      </form>
      </div>
