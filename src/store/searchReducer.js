@@ -6,12 +6,20 @@ const BASE_URL= 'jobs/'
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 const GET_JOB = createAction('job/Search')
 
-const initState =[];
+const initState = {
+    delay: null,
+    data:[]
+  }
+;
 
 const searchReducer = createReducer(initState  , (builder) => {
     builder
         .addCase(`${GET_JOB}/fulfilled` , (state , action)=>{
-        return action.payload
+        return {
+          ...state,
+          data: action.payload,
+          delay:false
+        };
     })
     .addCase(`${GET_JOB}/pending`, (state , action)=>{
         return {...state , delay: true}

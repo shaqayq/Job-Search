@@ -1,5 +1,6 @@
 .search{
-    width: 100%;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .job-search-form {
@@ -93,4 +94,10 @@
     padding: 15px;
     background: #cf7d26;
     border-radius: 22px
+  }
+
+#loading-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }

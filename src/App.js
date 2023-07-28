@@ -16,6 +16,7 @@ import {
 
 function App() {
   return (
+     // eslint-disable-next-line
     <Router>
     <div className="App">
       <Navbar />

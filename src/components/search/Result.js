@@ -3,8 +3,9 @@ import JobCard from '../jobs/jobCard'
 import Pagination from '../pagination/Pagination'
 import { usePagination } from '../pagination/PaginationUtils';
 export default function Result(props) {
-
-  const jobs_length = props.result.length;
+console.log(props);
+ 
+   const jobs_length = props.result.length;
   const {currentPage, jobsPerPage, currentJobs, paginate } = usePagination(1,4,props.result)
 
   return (
