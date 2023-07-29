@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import { useDispatch } from 'react-redux';
 import { fetch_job } from '../../store/searchReducer';
-export default function JobSearch() {
+export default function SearchForm() {
     
     const dispatch = useDispatch();
     const [formData , setFormData] = useState({
@@ -36,8 +36,10 @@ export default function JobSearch() {
      <form className="job-search-form" onSubmit={handleSubmit}>
      <h3 id='form-title'>Search Your Dream Job</h3>
         <div className="form-group">
-            <label htmlFor="search">Title:</label>
-            <input type="text" id="search" name="title" placeholder="Search jobs..."  onChange={handleChange} value={formData.title}/>
+            <label htmlFor="search">Title:*
+            <span>(required)
+                </span></label>
+            <input type="text" id="search" name="title" placeholder="Search jobs..."  onChange={handleChange} value={formData.title} required/>
         </div>
         <div className="form-group">
             <label htmlFor="source-url">Source URL:</label>

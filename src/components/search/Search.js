@@ -1,6 +1,6 @@
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
-import JobSearch from './JobSearch'
+import SearchForm from './SearchForm'
 import Result from './Result'
 import Container from '../../layouts/container'
 
@@ -26,7 +26,7 @@ export default function Search() {
    <>
    <Container>
     <div className='row search'>
-        <JobSearch/>
+        <SearchForm/>
      
      {delay && 
         <div id='loading-section' className='col-lg-8'>

@@ -7,7 +7,7 @@ const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 const GET_JOB = createAction('job/Search')
 
 const initState = {
-    delay: null,
+    delay: '',
     data:[]
   }
 ;
