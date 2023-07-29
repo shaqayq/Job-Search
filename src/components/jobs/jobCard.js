@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
 import {BsBookmarkHeart} from 'react-icons/bs'
-import {FaBookmark} from 'react-icons/fa'
+
 import {FcHome, FcOrganization} from 'react-icons/fc'
 
 export default function JobCard(props) {
@@ -18,6 +18,36 @@ export default function JobCard(props) {
   };
   const randomBackgroundColor = getRandomColor();
 
+  const jobs_detail = props.details;
+  const [saveJob, setsaveJob] = useState({
+    title: '',
+    role: '',
+    company_name: '',
+    employment_type: '',
+    date_posted: '',
+    remote: '',
+    url: '',
+    location: ''
+  });
+
+  const getJobs = (job) => {
+    setsaveJob((prevJob) => ({
+      ...prevJob,
+      ...job
+    }));
+  };
+  
+
+  const addJobs = (e) => {
+    e.preventDefault();
+    getJobs(jobs_detail);
+  };
+
+  useEffect(() => {
+    console.log(saveJob);
+  }, [saveJob]);
+
+
   return (
     <>
 
@@ -31,7 +61,7 @@ export default function JobCard(props) {
             <p id='post-date'>{date_posted}</p>
             </span>
             <span>
-            <a href='/'>
+            <a onClick={addJobs}>
               <i><BsBookmarkHeart/></i></a>
             </span>
          </section>
