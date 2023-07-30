@@ -1,13 +1,13 @@
 import React,{useState , useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import {BsBookmarkHeart} from 'react-icons/bs'
-
+import {FaBookmark} from 'react-icons/fa'
 import {FcHome, FcOrganization} from 'react-icons/fc'
-import { saveJob } from '../../store/jobsReducer'
+import { saveJob , unsaveJob } from '../../store/jobsReducer'
 
 export default function JobCard(props) {
 
-  const {id, role, company_name, employment_type, date_posted,remote,url ,location} = props.details
+  const {id, role, company_name, employment_type, date_posted,remote,url ,location, save} = props.details
   const companyInitial = company_name.charAt(0);
 
   const dispatch = useDispatch()
@@ -25,13 +25,13 @@ export default function JobCard(props) {
   
   
 
-  const addJobs = (id) => {
-    // e.preventDefault();
-    console.log(props.details);
-    dispatch(saveJob(id , props.details))
-    // console.log(id);
+  const saveJobs = (id) => {
+    dispatch(saveJob(id))
   };
 
+  const removeJobs =(id) =>{
+    dispatch(unsaveJob(id))
+  }
 
 
   return (
@@ -47,8 +47,14 @@ export default function JobCard(props) {
             <p id='post-date'>{date_posted}</p>
             </span>
             <span>
-            <a onClick={()=>addJobs(id)}>
-              <i><BsBookmarkHeart/></i></a>
+              {save ? 
+                <a onClick={()=>removeJobs(id)}>
+                <i><FaBookmark/></i>
+                </a> :
+                 <a onClick={()=>saveJob(id)}>
+                 <i><BsBookmarkHeart/></i>
+                 </a>
+              }
             </span>
          </section>
              <hr/>
