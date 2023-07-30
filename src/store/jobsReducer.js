@@ -5,7 +5,7 @@ const URL = 'jobs/';
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 
 const GET_DATA = 'GET_DATA';
-
+const SAVED = 'SAVED_JOB'
 const initState = {
   data:[],
   delay:''
@@ -23,6 +23,21 @@ const jobsReducer = (state = initState, action) => {
           ...state,
           delay:true
         };
+      
+        case SAVED:
+        
+         const saved_job = state.data.map(item => {
+          if (item.id === action.id) {
+            return { ...item, saved: true };
+          }
+          return item;
+        });
+
+        return {
+          ...state ,
+          data: saved_job 
+        }
+
     default:
       return state;
   }
@@ -50,5 +65,11 @@ export const fetchJobs = createAsyncThunk(GET_DATA, async () => {
 
   
 });
+
+export const saveJob = (id , detail) =>({
+  type: SAVED,
+  id
+})
+
 
 export default jobsReducer;
