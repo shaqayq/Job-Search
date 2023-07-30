@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.contact-container {
+  z-index: 12;
+  max-width: 1050px;
+  width: 100%;
+  background: #fafafacc;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  color: #23414b;
+  margin: auto;
+
+}
+.contact-container .contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+.contact-content .image-box {
+  max-width: 55%;
+}
+.contact-content .image-box img {
+  width: 100%;
+}
+.contact-content .topic {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1870ac;
+}
+.contact-content form {
+  width: 40%;
+  margin-right: 30px;
+}
+.contact-content .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+.contact-content .input-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding: 0 16px;
+  background: #e2eff9;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.contact-content .input-box input:focus,
+.contact-content .input-box input:valid {
+  border-color: #09518187;
+  background-color: #fff;
+}
+.contact-content .input-box label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.contact-content .input-box input:focus ~ label,
+.contact-content .input-box input:valid ~ label {
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #186ba487;
+  background: #fff;
+}
+.contact-content .message-box {
+  min-height: 100px;
+  position: relative;
+}
+.contact-content .message-box textarea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  background: #e2eff9;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  padding: 5px 16px;
+  transition: all 0.3s ease;
+}
+.contact-content .message-box textarea:focus {
+  border-color: #186ba487;
+  background-color: #fff;
+}
+.contact-content .message-box label {
+  position: absolute;
+  font-size: 16px;
+  color: #636c72;
+  left: 18px;
+  top: 6px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.contact-content .message-box textarea:focus ~ label {
+  left: 12px;
+  top: -10px;
+  color: #237ab6;
+  font-size: 14px;
+  background: #fff;
+}
+.contact-content .input-box input[type="submit"] {
+  color: #fff;
+  background: #237ab6;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.contact-content .input-box input[type="submit"]:hover {
+  background-color: #186ba487;
+}
+@media (max-width: 1000px) {
+  .contact-content .image-box {
+    max-width: 70%;
+  }
+  .contact-content {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 900px) {
+  .contact-content .image-box {
+    display: none;
+  }
+  .contact-content form {
+    width: 100%;
+    margin-left: 30px;
+  }
+}

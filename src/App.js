@@ -2,7 +2,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from "./layouts/Navbar"
 import Main from "./components/jobs/main";
 import About from './components/about/About';
+import Contact from './components/Contact';
 import Footer from './layouts/footer';
+
+
 
 import {
   BrowserRouter as Router,
@@ -19,6 +22,8 @@ function App() {
       <Routes>
      <Route exact path='/' element={<Main/>}/>
      <Route path='/about' element={<About/>}/>
+     <Route path='/contact' element={<Contact/>}/>
+
      </Routes>
       <Footer/>
     </div>

@@ -21,7 +21,7 @@ export default function Navbar() {
              <Link to='/your_jobs'>
                   <p>Your Jobs</p>
              </Link>
-             <Link to='/your_jobs'>
+             <Link to='/contact'>
                  <p>Contact</p>
              </Link>
           

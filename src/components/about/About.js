@@ -1,28 +1,25 @@
 import React from 'react'
 import '../../style/about.css'
-import Responsiblity from './Responsiblity'
+import Responsibility from './Responsibility'
 import Description from './Description'
-import Welcom from './Welcom'
+import Welcome from './Welcom'
 import Mission from './Mission'
+import Container from '../container'
+
 export default function About() {
   return (
-   <>
-   <div className='about_container'>
-
-      <div className='about'>
-      
-      </div>
-      <div className='details'>
-        <Welcom/>
-        <hr/>
-        <Mission/>
-        <hr/>
-        <Responsiblity/>
-        <hr/>
-        <Description/>
-      </div>
-
-   </div>
-   </>
-  )
+    <>
+      <Container>
+        <div className='details'>
+          <Welcome />
+          <hr />
+          <Mission />
+          <hr />
+          <Responsibility />
+          <hr />
+          <Description />
+        </div>
+      </Container>
+    </>
+  );
 }
