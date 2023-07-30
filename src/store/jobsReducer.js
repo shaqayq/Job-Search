@@ -9,7 +9,8 @@ const SAVED = 'SAVED_JOB'
 const UNSAVE = 'UNSAVE_JOB'
 const initState = {
   data:[],
-  delay:''
+  delay:'',
+  saved:[]
 };
 
 const jobsReducer = (state = initState, action) => {
@@ -26,17 +27,15 @@ const jobsReducer = (state = initState, action) => {
         };
       
         case SAVED:
-         const saved_job = state.data.map(item => {
-          if (item.id === action.id) {
-            return { ...item, saved: true };
+          const { id } = action;
+          const itemToSave = state.data.find((item) => item.id === id);
+          if (itemToSave) {
+            return {
+              ...state,
+              saved: [...state.saved, itemToSave],
+            };
           }
-          return item;
-        });
-
-        return {
-          ...state ,
-          data: saved_job 
-        }
+          return state;
 
         case UNSAVE:
           const remove_job =state.data.map(item => {

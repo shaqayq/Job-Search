@@ -7,3 +7,11 @@
     width: 100vh;
     border-top: 2px solid;
 }
+
+.save_card .card{
+background-color: #8ebfe1;
+}
+
+.save_card .card:hover{
+    background-color: #237ab6;
+  }

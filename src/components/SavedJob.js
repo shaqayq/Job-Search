@@ -4,14 +4,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import { usePagination } from './pagination/PaginationUtils'
 import Pagination from './pagination/Pagination'
 import Container from '../layouts/container'
+import '../style/saveJob.css'
 export default function SavedJob() {
 
     const dispatch = useDispatch()
     const jobs = useSelector(state => state.jobs)
-    const saved_jobs = jobs?.data
-    const {currentPage, jobsPerPage, currentJobs, paginate } = usePagination(1,8,saved_jobs)
+    const saved_jobs = jobs?.saved
+    const {currentPage, jobsPerPage, currentJobs, paginate } = usePagination(1,4,saved_jobs)
 
-   const filter_job = saved_jobs.filter((val)=> val.save === true)
 
 
   return (
@@ -19,14 +19,17 @@ export default function SavedJob() {
     <Container>
         <div className='saved_job'>
             <h1 id='saved_title'>Your jobs</h1>
-            {filter_job.map((job)=>{
-               return <JobCard details={job} key={job.id}/>
-            })
-            }
+            
+            <div className='lists save_card'>
+                {saved_jobs.map((job)=>{
+                return <JobCard details={job} key={job.id} save={false}/>
+                })
+                }
+            </div>
 
             <Pagination
                 jobsPerPage={jobsPerPage}
-                totalJobs={filter_job.length}
+                totalJobs={saved_jobs.length}
                 paginate={paginate}
                 currentNumber={currentPage}
              />

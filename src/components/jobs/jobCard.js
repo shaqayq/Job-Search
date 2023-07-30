@@ -25,8 +25,9 @@ export default function JobCard(props) {
   
   
 
-  const saveJobs = (id) => {
-    dispatch(saveJob(id))
+  const saveJobs = () => {
+    
+    dispatch(saveJob(id));
   };
 
   const removeJobs =(id) =>{
@@ -47,11 +48,9 @@ export default function JobCard(props) {
             <p id='post-date'>{date_posted}</p>
             </span>
             <span>
-              {save ? 
-                <a onClick={()=>removeJobs(id)}>
-                <i><FaBookmark/></i>
-                </a> :
-                 <a onClick={()=>saveJob(id)}>
+              {!save ? 
+                <></> :
+                 <a onClick={()=>saveJobs()}>
                  <i><BsBookmarkHeart/></i>
                  </a>
               }
