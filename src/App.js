@@ -4,6 +4,7 @@ import Main from "./components/jobs/main";
 import About from './components/about/About';
 import Contact from './components/Contact';
 import Search from './components/search/Search';
+import SavedJob from './components/SavedJob';
 import Footer from './layouts/footer';
 
 
@@ -25,6 +26,8 @@ function App() {
      <Route path='/about' element={<About/>}/>
      <Route path='/contact' element={<Contact/>}/>
      <Route path='/search' element={<Search/>}/>
+     <Route path='/save-jobs' element={<SavedJob/>}/>
+
 
 
      </Routes>
