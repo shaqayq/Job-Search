@@ -28,6 +28,7 @@ export default function List() {
   return (
    <>
     <div className='job-lists'>
+      <h1 id='list-title'>Explore and Apply: Your Next Career Awaits</h1>
     <div className='lists'>
    {  currentJobs.map((element) => {
        return <JobCard key={element.id} details={element}/>
