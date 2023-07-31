@@ -4,7 +4,7 @@ import Responsibility from './Responsibility'
 import Description from './Description'
 import Welcome from './Welcom'
 import Mission from './Mission'
-import Container from '../container'
+import Container from '../../layouts/container'
 
 export default function About() {
   return (

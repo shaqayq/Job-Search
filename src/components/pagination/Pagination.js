@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/pagination.css';
+import '../../style/pagination.css';
 
 const Pagination = ({
   jobsPerPage, totalJobs, currentNumber, paginate,

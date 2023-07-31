@@ -3,6 +3,7 @@ import Navbar from "./layouts/Navbar"
 import Main from "./components/jobs/main";
 import About from './components/about/About';
 import Contact from './components/Contact';
+import Search from './components/search/Search';
 import Footer from './layouts/footer';
 
 
@@ -10,12 +11,12 @@ import Footer from './layouts/footer';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 function App() {
   return (
+     // eslint-disable-next-line
     <Router>
     <div className="App">
       <Navbar />
@@ -23,6 +24,8 @@ function App() {
      <Route exact path='/' element={<Main/>}/>
      <Route path='/about' element={<About/>}/>
      <Route path='/contact' element={<Contact/>}/>
+     <Route path='/search' element={<Search/>}/>
+
 
      </Routes>
       <Footer/>

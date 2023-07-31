@@ -6,9 +6,9 @@ export default function Message() {
    <>
    
     <div className='device-msg'>
-    <div class="main">
+    <div className="main">
         <h1>👋 Welcome to your dream career.
-            <div class="roller">
+            <div className="roller">
                 <p id="rolltext">Start your journey towards a fulfilling career today.<br/>
                     Let's find the perfect match for your skills and aspirations! <br/>
                 

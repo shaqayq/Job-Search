@@ -21,7 +21,7 @@ export default function Navbar() {
             
             <div className='dropdown'>
                 <p>Your Jobs<MdArrowDropDown/></p>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                     <Link to='/save-jobs'> <p>Saved Jobs</p></Link>
                     <hr></hr>
                     <Link to='/search'> <p>Serach Job</p></Link>
