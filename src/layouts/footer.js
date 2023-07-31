@@ -13,16 +13,16 @@ export default function Footer() {
         <div>
           <h4>Follow us:</h4>
           <ul id='foo_social'>
-            <li><a href='/'><FaGithub/> GitHub</a></li>
-            <li><a href=''><FaLinkedinIn/> LinkedinIn</a></li>
-            <li><a href=''><FaTwitter/> Twitter</a></li>
+            <li><a href='/'><FaGithub/></a></li>
+            <li><a href=''><FaLinkedinIn/></a></li>
+            <li><a href=''><FaTwitter/></a></li>
           </ul>
         </div>
 
         <div id='contact'>
         <h4>Contact:</h4>
          <span> 
-          <i><SiGmail/></i> 
+          <i><SiGmail/> </i> 
           adbc.der@gmail.com
           </span>
         </div>

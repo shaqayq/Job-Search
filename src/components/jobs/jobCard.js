@@ -7,9 +7,11 @@ import { saveJob , unsaveJob } from '../../store/jobsReducer'
 
 export default function JobCard(props) {
 
-  const {id, role, company_name, employment_type, date_posted,remote,url ,location, save} = props.details
+  const {id, role, company_name, employment_type, date_posted,remote,url ,location} = props.details
   const companyInitial = company_name.charAt(0);
-
+  
+  const {save} = props
+  console.log(save);
   const dispatch = useDispatch()
 
   const getRandomColor = () => {

@@ -35,7 +35,7 @@ export default function List() {
       </div> }
       
       {!delay && currentJobs.map((element) => {
-        return <JobCard key={element.id} details={element}/>
+        return <JobCard key={element.id} details={element} save={true}/>
       })}
       </div>
       <Pagination
