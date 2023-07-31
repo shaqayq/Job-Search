@@ -16,25 +16,46 @@
     width: 13%;
 }
 
-#social {
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    margin-right: 37px;
+/* Your CSS file (e.g., styles.css) */
+/* #social {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  margin-right: 37px;
 }
 
-#social a {
-    text-decoration: none;
-}
-
-
+#social a,
 #social p {
-    color: #237ab6;
-    font-weight: bold;
-    
+  text-decoration: none;
+  color: #237ab6;
+  font-weight: bold;
 }
 
-#social p:hover {
+#social .active {
+  color: #23b632;
+} */
+
+/* Your CSS file (e.g., styles.css) */
+#social {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  margin-right: 37px;
+}
+
+.nav-link , #drop {
+  text-decoration: none;
+  color: #237ab6;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: #4dabea;
+  text-decoration: underline;
+}
+
+
+#social a:hover {
     color: #dd972e;
     font-size: 16px;
     font-style: italic;
