@@ -11,7 +11,7 @@ export default function JobCard(props) {
   const companyInitial = company_name.charAt(0);
   
   const {save} = props
-  console.log(save);
+  
   const dispatch = useDispatch()
 
   const getRandomColor = () => {
@@ -24,17 +24,12 @@ export default function JobCard(props) {
   };
   const randomBackgroundColor = getRandomColor();
 
-  
-  
 
   const saveJobs = () => {
     
     dispatch(saveJob(id));
   };
 
-  const removeJobs =(id) =>{
-    dispatch(unsaveJob(id))
-  }
 
 
   return (

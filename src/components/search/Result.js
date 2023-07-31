@@ -11,9 +11,9 @@ export default function Result(props) {
     <>
        <div className='col-lg-8'>
        <div className='result '>
-          {props.dataLength  ? <h1 id='alert'>No Result</h1> :
+          {props.dataLength === 0 ? <h1 id='alert'>No Result</h1> :
           currentJobs.map((element) => {
-          return <JobCard key={element.id} details={element}/>
+          return <JobCard key={element.id} details={element} save={true}/>
         })}
      
         </div>
