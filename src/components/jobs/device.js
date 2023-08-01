@@ -8,7 +8,6 @@ export default function Device() {
     <>
     <div className='device-section'>
       <div className='device-bg'>
-
       </div>
         <Animation/>
         

@@ -7,8 +7,11 @@ import '../style/jobs.css'
 export default function Main() {
   return (
    <>
-   <Device/>
+   <div className='main-section'>
+    <Device/>
    <List />
+   </div>
+   
    </>
   )
 }

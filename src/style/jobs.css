@@ -1,5 +1,13 @@
 @media only screen and (max-width: 640px) {
-  
+  #list-title {
+    color: #5bc0eb;
+    font-size: 2vh;
+    border-bottom: 1px solid #5bc0eb;
+    width: 86%;
+    border-top: 1px solid #5bc0eb;
+    margin: auto;
+    margin-top: 2vh;
+  }
 }
 
 @media only screen and (min-width: 640px) {
