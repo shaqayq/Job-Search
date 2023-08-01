@@ -8,6 +8,11 @@
     margin: auto;
     margin-top: 2vh;
   }
+
+  #list_loading {
+    height: 20vh;
+    margin: 10vh 0 0 29vh;
+  }
 }
 
 @media only screen and (min-width: 640px) {
