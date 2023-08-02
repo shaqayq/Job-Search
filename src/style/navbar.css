@@ -4,8 +4,15 @@
 }
 
 .navbar{
-  justify-content: space-between;
-  margin: 0 6vh 0 1px;
+     margin: 0 6vh 0 1px; 
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #e7ecf1d1;
+    border-bottom: 1px solid #bbd2e0;
+    box-shadow: 0 2px #bbd2e078;
+ 
 }
 
 #social {

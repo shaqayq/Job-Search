@@ -1,7 +1,7 @@
 @media only screen and (max-width: 640px) {
   #list-title {
     color: #5bc0eb;
-    font-size: 2vh;
+    font-size: 20px;
     border-bottom: 1px solid #5bc0eb;
     width: 86%;
     border-top: 1px solid #5bc0eb;
@@ -12,6 +12,49 @@
   #list_loading {
     height: 20vh;
     margin: 10vh 0 0 29vh;
+  }
+
+  .lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 22px;
+    column-gap: 18px;
+    margin: 70px;
+  
+  }
+
+  .card:hover {
+    background-color: #4d78a721;
+  }
+  
+  .card {
+   
+    padding: 23px;
+    background: #f5ebd145;
+    box-shadow: 1px 1px #b7c3d4ad;  
+  }
+
+  .company_initial{
+    width: 11vh;
+  }
+
+  #mobile-bookmark {
+    display: block;
+  }
+
+  #desktop-bookmark{
+    display: none;
+  }
+
+  #mobile-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card span {
+   color: #0f5191;;
   }
 }
 
@@ -90,5 +133,11 @@
     height: 20vh;
   }
   
+  #mobile-bookmark {
+    display: none;
+  }
 
+  #desktop-bookmark{
+    display: block;
+  }
 }

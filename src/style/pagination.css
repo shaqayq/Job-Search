@@ -1,8 +1,10 @@
+
 @media only screen and (max-width: 640px) {
   .paginationBar {
     width: 50%;
     margin: auto;
     margin-top: 3%;
+
   }
 
   .paginationList {
@@ -12,13 +14,15 @@
   }
 
   .paginationList li {
-    border: 1px solid #e171b5;
-    box-shadow: 1px 1px #e171b5bd;
+    border: 1px solid #0f74bc;
+    box-shadow: 1px 1px #0f74bc40;
     border-radius: 2px;
+    margin: 0 6px;
+    padding: 3px;
   }
 
   #activeLink {
-    background-color: #e171b5;
+    color: #f6a500;
   }
 }
 

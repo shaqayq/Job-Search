@@ -37,7 +37,7 @@ export default function List() {
       {!delay && currentJobs.map((element) => {
         return <JobCard key={element.id} details={element} save={true}/>
       })}
-      </div>
+    </div>
       <Pagination
         jobsPerPage={jobsPerPage}
         totalJobs={all_jobs.length}
