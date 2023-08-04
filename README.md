@@ -1,8 +1,7 @@
 ### Job Search Website
  JobSearch is a powerful job search website that enables users to browse through a vast list of job opportunities, search for their favorite positions, save preferred jobs, and display relevant openings. Find your dream career with ease. Happy job hunting!
 
-## Built With
-
+## 🔧Built With
 - React
 - Redux
 - CSS
@@ -10,18 +9,18 @@
 - Gitflow
 
 
-## Live Demo
+## 🖼️Live Demo
 
 For the live demo click [here]()
 
-## Authors
+## 👩‍💻Authors
 
-👩‍💻 **Shaqayq Darwazi**
+ **Shaqayq Darwazi**
 
 - GitHub: [@shaqayq](https://github.com/shaqayq)
 - LinkedIn [Shaqayq Darwazi](https://www.linkedin.com/in/shaqayq-darwaz)
 
-## Getting Started🏁
+## 🏁Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
