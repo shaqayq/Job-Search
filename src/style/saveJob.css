@@ -1,0 +1,17 @@
+#saved_title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #2b7baf;
+    border-bottom: 2px solid;
+    margin: auto;
+    width: 100vh;
+    border-top: 2px solid;
+}
+
+.save_card .card{
+background-color: #8ebfe1;
+}
+
+.save_card .card:hover{
+    background-color: #237ab6;
+  }

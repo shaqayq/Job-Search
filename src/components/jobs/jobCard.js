@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useState , useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import {BsBookmarkHeart} from 'react-icons/bs'
 import {FaBookmark} from 'react-icons/fa'
 import {FcHome, FcOrganization} from 'react-icons/fc'
+import { saveJob , unsaveJob } from '../../store/jobsReducer'
 
 export default function JobCard(props) {
 
   const {id, role, company_name, employment_type, date_posted,remote,url ,location} = props.details
   const companyInitial = company_name.charAt(0);
+  
+  const {save} = props
+  
+  const dispatch = useDispatch()
 
   const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
@@ -17,6 +23,14 @@ export default function JobCard(props) {
     return color;
   };
   const randomBackgroundColor = getRandomColor();
+
+
+  const saveJobs = () => {
+    
+    dispatch(saveJob(id));
+  };
+
+
 
   return (
     <>
@@ -31,8 +45,12 @@ export default function JobCard(props) {
             <p id='post-date'>{date_posted}</p>
             </span>
             <span>
-            <a href='/'>
-              <i><BsBookmarkHeart/></i></a>
+              {!save ? 
+                <></> :
+                 <a onClick={()=>saveJobs()}>
+                 <i><BsBookmarkHeart/></i>
+                 </a>
+              }
             </span>
          </section>
              <hr/>

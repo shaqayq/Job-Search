@@ -6,7 +6,7 @@
     padding: 23px;
     background-color: #d2dcec;
     position: relative;
- 
+
 
 }
 
@@ -20,6 +20,9 @@
 
 #foo_social {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 }
 
 #foo_social li a{
@@ -27,6 +30,7 @@
     font-size: 17px;
     text-decoration: none;
     cursor: pointer;
+    margin: 0 10px;;
 }
 
 #contact span {

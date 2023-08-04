@@ -1,8 +1,8 @@
 import React from 'react'
-import List from './list'
-import Device from './device'
+import List from './jobs/list'
+import Device from './jobs/device'
 
-import '../../style/jobs.css'
+import '../style/jobs.css'
 
 export default function Main() {
   return (
