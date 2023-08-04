@@ -1,3 +1,25 @@
+@media only screen and (max-width: 640px) {
+.device-section{
+    background-image: url('../img/bg5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30vh;
+}
+
+.device-animation{
+    display: none;
+  }
+  
+.device-msg {
+    height: 50vh;
+  }
+
+.device-bg{
+    display: none;
+}
+}
+@media only screen and (min-width: 640px) {
 .device-section {
     display: flex;
     flex-direction: row;
@@ -11,16 +33,4 @@
     background-size: 100%;
   
 }
-
-/* .device-bg{
-    background-image: url('../img/bg4.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-  
-    height: 500px;
-    background-size: 100%;
-  
-    -webkit-filter: blur(6px);
-  
-} */
+}

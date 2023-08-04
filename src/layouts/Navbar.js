@@ -1,18 +1,21 @@
 import React from 'react'
 import '../style/navbar.css'
-import { Link , NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {MdArrowDropDown} from 'react-icons/md'
+import {PiListBold} from 'react-icons/pi'
 import logo from '../img/logo.png'
 export default function Navbar() {
   return (
     <>
-        <div className='navbar'>
-  <div>
+<div className='navbar'>
+  <div id='logo-div'>
     <a href='/'>
       <img src={logo} alt='logo' id='logo'/>
     </a>
   </div>
-
+   <span id='humBtn'>
+    <i><PiListBold/> </i>
+   </span>
   <div id='social'>
     <NavLink exact to='/' activeClassName="active" className="nav-link">
       Home

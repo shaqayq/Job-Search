@@ -34,17 +34,26 @@ export default function JobCard(props) {
 
   return (
     <>
-
-
       <div className='card'>  
          <section id="title">
-          
+            <div id='mobile-title'>
+              
             <h1 className='company_initial' style={{backgroundColor: randomBackgroundColor}}>{companyInitial}</h1>
+            <span id='mobile-bookmark'>
+              {!save ? 
+                <></> :
+                 <a onClick={()=>saveJobs()}>
+                 <i><BsBookmarkHeart/></i>
+                 </a>
+              }
+            </span>
+            </div>
             <span>
             <h6>{role}</h6>
+           
             <p id='post-date'>{date_posted}</p>
             </span>
-            <span>
+            <span id='desktop-bookmark'>
               {!save ? 
                 <></> :
                  <a onClick={()=>saveJobs()}>

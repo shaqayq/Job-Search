@@ -3,7 +3,7 @@ import React from 'react'
 export default function Welcom() {
   return (
     <>
-     <h1>Welcome to Our Site</h1>
+     <h1 id='about-title'>Welcome to Our Site</h1>
         <p>
          At Job Search Website ,
          we are dedicated to connecting job seekers with their
