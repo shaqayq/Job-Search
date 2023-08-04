@@ -100,13 +100,11 @@
     align-items:  flex-start;
   }
   
-  #title a {
+  #title span {
     font-size: 19px;
   }
   
-  #title i:hover {
-   color: #ff0000;
-  }
+ 
   
   #post-date {
   
@@ -141,3 +139,7 @@
     display: block;
   }
 }
+
+#title i:hover {
+  color: #ff0000;
+ }

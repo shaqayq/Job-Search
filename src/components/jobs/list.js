@@ -20,7 +20,7 @@ export default function List() {
   
   useEffect(()=>{
     dispatch(fetchJobs())
-  },[] )
+  },[dispatch] )
 
 
   return (
