@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 
-const URL = 'https://findwork.dev/api/jobs/';
+const URL = 'jobs/';
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 
 const GET_DATA = 'GET_DATA';
