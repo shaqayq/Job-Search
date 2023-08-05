@@ -11,7 +11,7 @@
 
 ## 🖼️Live Demo
 
-For the live demo click [here]()
+For the live demo click [here](https://jobsearchnp.netlify.app/)
 
 ## 👩‍💻Authors
 
