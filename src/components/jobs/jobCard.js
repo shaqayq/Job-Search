@@ -1,9 +1,9 @@
-import React,{useState , useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import {BsBookmarkHeart} from 'react-icons/bs'
-import {FaBookmark} from 'react-icons/fa'
+
 import {FcHome, FcOrganization} from 'react-icons/fc'
-import { saveJob , unsaveJob } from '../../store/jobsReducer'
+import { saveJob  } from '../../store/jobsReducer'
 
 export default function JobCard(props) {
 
@@ -42,9 +42,9 @@ export default function JobCard(props) {
             <span id='mobile-bookmark'>
               {!save ? 
                 <></> :
-                 <a onClick={()=>saveJobs()}>
+                 <span onClick={()=>saveJobs()}>
                  <i><BsBookmarkHeart/></i>
-                 </a>
+                 </span>
               }
             </span>
             </div>
@@ -56,9 +56,9 @@ export default function JobCard(props) {
             <span id='desktop-bookmark'>
               {!save ? 
                 <></> :
-                 <a onClick={()=>saveJobs()}>
+                 <span  onClick={()=>saveJobs()}>
                  <i><BsBookmarkHeart/></i>
-                 </a>
+                 </span>
               }
             </span>
          </section>
@@ -74,7 +74,7 @@ export default function JobCard(props) {
             </p>
          
          
-         <a href={url} target='_blank'> <button className='btn btn-sm btn-info'>Apply</button></a>
+         <a href={url} target='_blank' rel="noreferrer"> <button className='btn btn-sm btn-info'>Apply</button></a>
        
          </section>
         </div>

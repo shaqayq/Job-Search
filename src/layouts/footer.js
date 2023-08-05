@@ -14,8 +14,8 @@ export default function Footer() {
           <h4>Follow us:</h4>
           <ul id='foo_social'>
             <li><a href='/'><FaGithub/></a></li>
-            <li><a href=''><FaLinkedinIn/></a></li>
-            <li><a href=''><FaTwitter/></a></li>
+            <li><a href='/'><FaLinkedinIn/></a></li>
+            <li><a href='/'><FaTwitter/></a></li>
           </ul>
         </div>
 

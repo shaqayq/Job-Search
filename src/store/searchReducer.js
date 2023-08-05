@@ -2,7 +2,7 @@ import { createAction, createReducer , createAsyncThunk} from "@reduxjs/toolkit"
 
 
 
-const BASE_URL= 'jobs/'
+const BASE_URL= '/api/jobs/'
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 const GET_JOB = createAction('job/Search')
 
