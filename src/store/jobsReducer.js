@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 
-const URL = 'jobs/';
+const URL = '/api/jobs/';
 const AUTH = 'Token 289c5f4b2621c0db7ea969f39da94109abb756ad';
 
 const GET_DATA = 'GET_DATA';
@@ -11,7 +11,7 @@ const initState = {
   data:[],
   delay:'',
   saved:[]
-};
+};  
 
 const jobsReducer = (state = initState, action) => {
   switch (action.type) {
